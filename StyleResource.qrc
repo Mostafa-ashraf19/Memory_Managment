@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/Style">
+        <file>Style/qss.qss</file>
+        <file>Style/SpyBot.qss</file>
+    </qresource>
+</RCC>
