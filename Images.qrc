@@ -1,0 +1,22 @@
+<RCC>
+    <qresource prefix="/Images">
+        <file>Images/aboutIcon.png</file>
+        <file>Images/aboutQtIcon.png</file>
+        <file>Images/copyIcon.png</file>
+        <file>Images/cut-fr.png</file>
+        <file>Images/cutIcon.png</file>
+        <file>Images/minions.png</file>
+        <file>Images/pasteIcon.png</file>
+        <file>Images/quitIcon.png</file>
+        <file>Images/redoIcon.png</file>
+        <file>Images/undoIcon.png</file>
+        <file>Images/run.png</file>
+        <file>Images/Save.png</file>
+        <file>Images/Simulate.png</file>
+        <file>Images/Exit.png</file>
+        <file>Images/print.png</file>
+        <file>Images/edit.png</file>
+        <file>Images/open.png</file>
+        <file>Images/Newproject.png</file>
+    </qresource>
+</RCC>
