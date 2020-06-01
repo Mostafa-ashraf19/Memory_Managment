@@ -20,9 +20,8 @@ int main(int argc, char *argv[])
     QApplication a(argc, argv);
     Layout w;
 
-  // QString css = readTextFile(":/Style/Style/SpyBot.qss");
-    //a.setStyleSheet(css);
-
+   QString css = readTextFile(":/Style/Style/qss.qss");
+    a.setStyleSheet(css);
 
     w.show();
     return a.exec();
