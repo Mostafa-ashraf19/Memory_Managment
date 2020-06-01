@@ -6,26 +6,34 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>736</width>
-    <height>468</height>
+    <width>730</width>
+    <height>453</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Layout</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <layout class="QHBoxLayout" name="horizontalLayout_7">
-    <item>
-     <widget class="QGraphicsView" name="graphicsView">
-      <property name="sizePolicy">
-       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-        <horstretch>2</horstretch>
-        <verstretch>0</verstretch>
-       </sizepolicy>
-      </property>
-     </widget>
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="1" column="0">
+     <layout class="QHBoxLayout" name="horizontalLayout_7">
+      <item>
+       <widget class="QPushButton" name="TablesView">
+        <property name="text">
+         <string>Tables Section</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="DrawingView">
+        <property name="text">
+         <string>Drawing Section</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
     </item>
-    <item>
+    <item row="0" column="1" rowspan="2">
      <widget class="QTabWidget" name="tabWidget">
       <property name="sizePolicy">
        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
@@ -34,7 +42,7 @@
        </sizepolicy>
       </property>
       <property name="currentIndex">
-       <number>1</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="tab">
        <attribute name="title">
@@ -66,7 +74,7 @@
              </spacer>
             </item>
             <item>
-             <widget class="QLineEdit" name="lineEdit"/>
+             <widget class="QLineEdit" name="MemorySizeInput"/>
             </item>
            </layout>
           </item>
@@ -89,7 +97,7 @@
            </layout>
           </item>
           <item>
-           <widget class="QTableView" name="tableView"/>
+           <widget class="QTableWidget" name="HolesTableViewTBlwdgt"/>
           </item>
          </layout>
         </item>
@@ -102,6 +110,20 @@
        <layout class="QHBoxLayout" name="horizontalLayout_6">
         <item>
          <layout class="QVBoxLayout" name="verticalLayout_2">
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_5">
+            <item>
+             <widget class="QComboBox" name="CBAlgorithmType"/>
+            </item>
+            <item>
+             <widget class="QPushButton" name="SimulateButton">
+              <property name="text">
+               <string>Simulate</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
           <item>
            <layout class="QHBoxLayout" name="horizontalLayout_4">
             <item>
@@ -127,23 +149,82 @@
            </layout>
           </item>
           <item>
-           <widget class="QListView" name="listView"/>
-          </item>
-          <item>
-           <layout class="QHBoxLayout" name="horizontalLayout_5">
-            <item>
-             <widget class="QComboBox" name="comboBox"/>
-            </item>
-            <item>
-             <widget class="QPushButton" name="SimulateButton">
-              <property name="text">
-               <string>Simulate</string>
-              </property>
-             </widget>
-            </item>
-           </layout>
+           <widget class="QTreeWidget" name="ProcessTree">
+            <column>
+             <property name="text">
+              <string notr="true">1</string>
+             </property>
+            </column>
+           </widget>
           </item>
          </layout>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+    <item row="0" column="0">
+     <widget class="QStackedWidget" name="stackedWidget">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+        <horstretch>2</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="currentIndex">
+       <number>1</number>
+      </property>
+      <widget class="QWidget" name="page">
+       <layout class="QVBoxLayout" name="verticalLayout_3">
+        <item>
+         <widget class="QLabel" name="label_2">
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>20</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Drawing</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_5"/>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="page_2">
+       <layout class="QGridLayout" name="gridLayout_2">
+        <item row="0" column="0">
+         <layout class="QHBoxLayout" name="horizontalLayout_8">
+          <item>
+           <widget class="QLabel" name="label_3">
+            <property name="text">
+             <string>Tables</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="ProcessDealocate"/>
+          </item>
+          <item>
+           <widget class="QPushButton" name="DealocateButton">
+            <property name="text">
+             <string>Dealocate</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="1" column="0">
+         <widget class="QTreeWidget" name="AllocationInfoTree">
+          <column>
+           <property name="text">
+            <string notr="true">1</string>
+           </property>
+          </column>
+         </widget>
         </item>
        </layout>
       </widget>
@@ -156,7 +237,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>736</width>
+     <width>730</width>
      <height>22</height>
     </rect>
    </property>
@@ -171,7 +252,7 @@
     <addaction name="separator"/>
     <addaction name="actionPrint"/>
     <addaction name="separator"/>
-    <addaction name="actionExit"/>
+    <addaction name="actionClear"/>
    </widget>
    <widget class="QMenu" name="menuEdit">
     <property name="title">
@@ -197,7 +278,6 @@
    <addaction name="menuBuild"/>
    <addaction name="menuHelp"/>
   </widget>
-  <widget class="QStatusBar" name="statusbar"/>
   <widget class="QToolBar" name="toolBar">
    <property name="windowTitle">
     <string>toolBar</string>
@@ -210,14 +290,19 @@
    </attribute>
    <addaction name="actionNew"/>
    <addaction name="actionOpen"/>
+   <addaction name="separator"/>
    <addaction name="actionRun"/>
    <addaction name="actionSaveAs"/>
+   <addaction name="separator"/>
    <addaction name="actionEdit"/>
-   <addaction name="actionExit"/>
+   <addaction name="actionClear"/>
+   <addaction name="separator"/>
    <addaction name="actionUndo"/>
    <addaction name="actionRedo"/>
+   <addaction name="separator"/>
    <addaction name="actionPrint"/>
    <addaction name="actionAbout_Project"/>
+   <addaction name="separator"/>
   </widget>
   <action name="actionNew">
    <property name="icon">
@@ -264,13 +349,16 @@
     <string>Print</string>
    </property>
   </action>
-  <action name="actionExit">
+  <action name="actionClear">
    <property name="icon">
     <iconset resource="Images.qrc">
      <normaloff>:/Images/Images/Exit.png</normaloff>:/Images/Images/Exit.png</iconset>
    </property>
    <property name="text">
-    <string>Exit</string>
+    <string>Clear</string>
+   </property>
+   <property name="toolTip">
+    <string>Clear</string>
    </property>
   </action>
   <action name="actionUndo">
