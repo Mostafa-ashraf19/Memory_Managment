@@ -1,4 +1,4 @@
-QT       += core gui
+QT       += core gui charts
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -16,12 +16,16 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    CodeBase/memory_mangement.cpp \
+    Memorygraph/Memorygraph.cpp \
     holesdialog.cpp \
     main.cpp \
     layout.cpp \
     processdialog.cpp
 
 HEADERS += \
+    CodeBase/memory_mangement.h \
+    Memorygraph/Memorygraph.h \
     holesdialog.h \
     layout.h \
     processdialog.h
@@ -39,3 +43,5 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 RESOURCES += \
     Images.qrc \
     StyleResource.qrc
+
+RC_ICONS = Images/Icon.ico
