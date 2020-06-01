@@ -226,7 +226,7 @@ void memory_mangement::create_new_process_first_fit(vector<segment> new_process)
 	allocated_table = allocated_table_temp;
 	arrange_allocated_table();
 	free_table = arrange_free_table_according_to_starting_address(free_table);
-	/////////////////////////////////
+	/////////////////////
 	vector<allocated_item_information > process_informatin_temp;
 	for (auto temp : allocated_table)
 	{

@@ -57,7 +57,7 @@ public:
 
 	void delete_from_allocated_table(int element);
 	void create_new_process_first_fit(vector<segment> new_process);
-    //void create_new_process_first_fit(Process new_process);
+   
 	void create_new_process_best_fit(vector<segment> new_process);
 	void arrange_allocated_table();
 	void up_to_size();
