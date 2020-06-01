@@ -47,7 +47,7 @@ These instructions will get you a copy of the project up and running on your loc
 ## Installation and building process :
 1. Install exe
 ``` 
-exe source file: soon
+exe source file: shorturl.at/kpzZ3
 ``` 
 2. Run it
  
@@ -60,8 +60,9 @@ exe source file: soon
 - soon
   
 ## Deployment
-  - Windows Package: soon 
-  
+  - Windows Package: 
+
+  ![github](https://github.com/Mostafa-ashraf19/Memory_Managment/blob/master/Images/Icon.ico)
   
 
 
