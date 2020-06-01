@@ -1,0 +1,7 @@
+1000
+H 0 100
+H 600 200
+p1 main 21 code 260 text 60
+p2 main 120 code 207 text 50
+p3 main 50 code 209 text 20
+p4 main 23 code 201 text 30 fun 50
